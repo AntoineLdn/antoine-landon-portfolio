@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import ScrollToTop from '../components/ScrollToTop'
 import Navigation from '../components/navigation'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={inter.className}>
+        <ScrollToTop />
         <Navigation />
         <main className="min-h-screen">
           {children}
